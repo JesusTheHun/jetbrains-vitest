@@ -1,13 +1,17 @@
 import { bench, describe, expect, it } from "vitest";
 
 const fn = () => {
-  expect(true).toBe(true);
+  const x = [1, 5, 4, 2, 3]
+  x.sort((a, b) => {
+    return a - b
+  })
 };
 
 const condition = true;
 
 describe('JetBrains IDE should display gutter icons for benchmark functions', () => {
-  const benchOpts = { warmupIterations: 10 };
+  const benchOpts = { warmupIterations: 100, iterations: 1000 };
+
   bench('bench, fn', fn);
   bench('bench, fn, opts', fn, benchOpts);
 

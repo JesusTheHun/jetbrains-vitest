@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test:defaultTask": "vitest defaultTask --run",
-    "test:customTask": "vitest customTask --run"
+    "test:customTask": "vitest customTask --run",
+    "test:benchTask": "vitest bench benchTask --run"
   },
   "author": "Jonathan MASSUCETTI",
   "license": "Apache 2",
