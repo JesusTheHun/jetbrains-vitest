@@ -1,0 +1,14 @@
+{
+  "name": "jetbrains-vitest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:task": "vitest task --run"
+  },
+  "author": "Jonathan MASSUCETTI",
+  "license": "Apache 2",
+  "devDependencies": {
+    "vitest": "^1.4.0"
+  }
+}
