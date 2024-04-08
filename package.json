@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:task": "vitest task --run"
+    "test:defaultTask": "vitest defaultTask --run",
+    "test:customTask": "vitest customTask --run"
   },
   "author": "Jonathan MASSUCETTI",
   "license": "Apache 2",

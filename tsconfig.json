@@ -1,0 +1,21 @@
+{
+  "include": [
+    "./src"
+  ],
+  "compilerOptions": {
+    "lib": [
+      "es2022"
+    ],
+    "target": "es2022",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitOverride": true,
+    "moduleResolution": "bundler",
+    "module": "esnext",
+    "declaration": true,
+    "sourceMap": true,
+    "resolveJsonModule": true
+  }
+}
