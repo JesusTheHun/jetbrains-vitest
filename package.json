@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "test": "vitest --run",
     "test:defaultTask": "vitest defaultTask --run",
     "test:customTask": "vitest customTask --run",
     "test:benchTask": "vitest bench benchTask --run"
