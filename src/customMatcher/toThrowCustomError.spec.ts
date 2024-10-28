@@ -10,9 +10,17 @@ async function doStuff() {
   throw new CustomError();
 }
 
-test('has no TS error', async ({ expect }) => {
+type LocalTaskContext = {
+  title: string;
+  makeSandwich: (opts: { timeout: number }) => void;
+}
+
+test<LocalTaskContext>('has no TS error', async ({ expect, makeSandwich }) => {
   // It should offer autocompletion for `toThrowCustomError()`
   expect(doStuff).rejects.toThrowCustomError();
+  makeSandwich({
+    // Try code completion here
+  })
 });
 
 
