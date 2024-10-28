@@ -1,3 +1,4 @@
+import { doSomething } from "./doSomething";
 import { describe, it, expectTypeOf } from 'vitest';
 
 describe('doSomething', () => {

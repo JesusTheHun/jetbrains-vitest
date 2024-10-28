@@ -1,6 +1,5 @@
 import 'vitest';
-
-import type { ExpectCustomError } from './customMatcher.js';
+import { ExpectCustomError } from "./customMatcher/toThrowCustomError";
 
 declare module 'vitest' {
   interface Assertion<T = any> extends ExpectCustomError<T> {}
