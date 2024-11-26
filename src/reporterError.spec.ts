@@ -14,7 +14,7 @@ describe('JetBrains IDE should display the properties of the Error thrown', () =
 
   it('should display the `cause` property', () => {
     throw new CustomError({
-      cause: 'trying to divide by zero',
+      cause: new Error('trying to divide by zero'),
     })
   });
 
@@ -27,7 +27,7 @@ describe('JetBrains IDE should display the properties of the Error thrown', () =
   it('should display all the properties of the error', () => {
     throw new CustomError({
       message: 'Something went wrong',
-      cause: 'trying to divide by zero',
+      cause: new Error('trying to divide by zero'),
       code: 666,
     })
   })
