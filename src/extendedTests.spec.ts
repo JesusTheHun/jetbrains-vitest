@@ -1,5 +1,28 @@
 import { describe, it } from "vitest";
 
+/**
+ * This file contains cases regarding test extension.
+ * If you need some value to be accessible in a large number of tests, you can
+ * decide to extend a test :
+ * 
+ * const myTest = it.extend({
+ *   foo: 'bar'
+ * });
+ * 
+ * In the example above, we have define a fixture named `foo`.
+ * Now you can use `myTest` to declare a test that will automatically include your fixtures :
+ * 
+ * myTest('my test', ({ foo }) => {...})
+ * 
+ * As you can see below, when you name your extended tests 'test' or 'it', the gutter icon shows up, but it doesn't
+ * when you name it something else.
+ * 
+ * You can also create a new test function based on the built-in one if you require some advanced custom logic.
+ * They will be used the same way as a regular test.
+ * 
+ * @see https://vitest.dev/api/#test-extended
+ */
+
 describe('JetBrains IDE should support of vitest extended tests', () => {
   describe('extended test is named like a vitest function', () => {
     const test = it.extend({

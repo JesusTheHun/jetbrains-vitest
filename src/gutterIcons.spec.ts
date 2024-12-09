@@ -1,5 +1,21 @@
+/**
+ * This file aims to provide an exhaustive list of all possible syntax to declare a test with vitest.
+ * You will find additional cases in the file `./extendedTests.spec.ts`.
+ */
+
 import { describe, expect, it } from 'vitest';
 
+
+/**
+ * When vitest starts, it first collects all the tests.
+ * To do that, it reads all the tests files that match the CLI argument, if any.
+ * 
+ * Functions like `describe` or `suite` are collector functions.
+ * Meaning they themselves contain collector functions or tests.
+ * 
+ * Because the function `notTestCollector` is not a collector function, the call to the test function `it` will
+ * never be reached by vitest and therefore the test cannot be executed.
+ */
 const notTestCollector = () => {
   it('should not display gutter icon', ({ expect }) => {
     expect.fail('never collected');
